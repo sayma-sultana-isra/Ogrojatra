@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> my-extra-files
@@ -136,3 +137,12 @@ mentorshipProgramSchema.methods.getActiveEnrollmentsCount = function() {
 };
 
 export default mongoose.model('MentorshipProgram', mentorshipProgramSchema);
+=======
+const mentorshipSchema = new mongoose.Schema({
+  mentor: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  student: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  rating: Number,
+});
+
+export default mongoose.model('Mentorship', mentorshipSchema);
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977

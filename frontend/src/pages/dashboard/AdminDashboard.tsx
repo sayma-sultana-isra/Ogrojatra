@@ -8,12 +8,16 @@ import {
   Users, 
   Briefcase, 
   Target,
+<<<<<<< HEAD
   Loader2,
   CalendarDays
 <<<<<<< HEAD
 =======
 
 >>>>>>> my-extra-files
+=======
+  Loader2
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 } from 'lucide-react';
 
 interface AdminStats {
@@ -176,6 +180,7 @@ const AdminDashboard: React.FC = () => {
                   </div>
                 </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link
 =======
 
@@ -190,6 +195,8 @@ const AdminDashboard: React.FC = () => {
                     <p className="text-sm text-yellow-700">Review and moderate events</p>
                    </div>
                </Link>
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                 
                 <Link
                   to="/admin/roadmaps"

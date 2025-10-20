@@ -48,6 +48,7 @@ const Sidebar: React.FC = () => {
           { icon: User, label: 'My Profile', path: '/profile' },
           { icon: UserPlus, label: 'Network', path: '/network' },
           { icon: Briefcase, label: 'Job Search', path: '/jobs/search' },
+<<<<<<< HEAD
           { icon: FileText, label: 'My Applications', path: '/applications' },
           { icon: Building, label: 'Company Applications', path: '/company-applications' },
           { icon: CalendarDays, label: 'Events', path: '/events' },
@@ -82,10 +83,19 @@ const Sidebar: React.FC = () => {
          
         ];
 
+=======
+          { icon: Building, label: 'Companies', path: '/companies' },
+          { icon: FileText, label: 'Applications', path: '/applications' },
+          { icon: CalendarDays, label: 'Events', path: '/events' },
+          { icon: GraduationCap, label: 'Mentorship', path: '/mentorship/student' },
+          { icon: Target, label: 'Career Roadmaps', path: '/roadmaps' }
+        ];
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
       case 'alumni':
         return [
           { icon: MessageSquare, label: 'Feed', path: '/dashboard' },
           { icon: User, label: 'My Profile', path: '/profile' },
+<<<<<<< HEAD
           
           { icon: CalendarDays, label: 'Events & Meetups', path: '/events' },
           { icon: Building, label: 'Companies', path: '/companies' },
@@ -119,6 +129,31 @@ const Sidebar: React.FC = () => {
           
           
           
+=======
+          { icon: UserPlus, label: 'Network', path: '/network' },
+          { icon: Briefcase, label: 'Job Search', path: '/jobs/search' },
+          { icon: GraduationCap, label: 'Mentorship Panel', path: '/mentorship/alumni' }
+        ];
+      case 'employer':
+        return [
+            { icon: Home, label: 'Dashboard', path: '/dashboard' },
+            { icon: PlusCircle, label: 'Post a Job', path: '/jobs/create' },
+            { icon: List, label: 'Manage Jobs', path: '/jobs/manage' },
+            { icon: Users, label: 'Applications', path: '/applications/manage' },
+            { icon: Building, label: 'My Companies', path: '/companies/manage' },
+            { icon: Calendar, label: 'Manage Events', path: '/events/manage' },
+            { icon: User, label: 'My Profile', path: '/profile' }
+        ];
+      case 'admin':
+        return [
+          { icon: BarChart3, label: 'Dashboard', path: '/dashboard' },
+          { icon: Users, label: 'Manage Users', path: '/admin/users' },
+          { icon: Briefcase, label: 'Manage Jobs', path: '/admin/jobs' },
+          { icon: Building, label: 'Manage Companies', path: '/admin/companies' },
+          { icon: CalendarDays, label: 'Manage Events', path: '/admin/events' },
+          { icon: GraduationCap, label: 'Mentorships', path: '/admin/mentorships' },
+          { icon: Target, label: 'Manage Roadmaps', path: '/admin/roadmaps' }
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
         ];
 
       default:
@@ -131,6 +166,7 @@ const Sidebar: React.FC = () => {
   return (
     <div className="w-64 bg-white shadow-sm border-r border-gray-200 h-full">
       <div className="p-6">
+<<<<<<< HEAD
         <div className="flex items-center space-x-3 mb-8">
           <div className="bg-blue-600 p-2 rounded-lg">
             <Briefcase className="h-6 w-6 text-white" />
@@ -141,6 +177,8 @@ const Sidebar: React.FC = () => {
           </div>
         </div>
 
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
         <nav className="space-y-1">
           {menuItems.map((item) => {
             const Icon = item.icon;

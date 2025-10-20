@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { useParams, useNavigate } from 'react-router-dom';
+=======
+import { useParams } from 'react-router-dom';
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 import { useAuth } from '../../contexts/AuthContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -26,9 +30,13 @@ import {
   Trophy,
   GraduationCap,
   Briefcase,
+<<<<<<< HEAD
   Video,
   Edit,
   Eye
+=======
+  Video
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 } from 'lucide-react';
 
 interface Event {
@@ -61,7 +69,10 @@ interface Event {
 const EventDetails: React.FC = () => {
   const { id } = useParams();
   const { user } = useAuth();
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
   const [event, setEvent] = useState<Event | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -140,10 +151,13 @@ const EventDetails: React.FC = () => {
       window.open(event.onlineLink, '_blank');
     }
   };
+<<<<<<< HEAD
    const isEventCreator = event && user?._id === event.postedBy._id;
 
   // Check if current user is the event creator
   const isEventCreator = event && user?._id === event.postedBy._id;
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 
   if (loading) {
     return (
@@ -172,6 +186,7 @@ const EventDetails: React.FC = () => {
   return (
     <DashboardLayout>
       <div className="p-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Event Creator Notice */}
 =======
@@ -204,10 +219,13 @@ const EventDetails: React.FC = () => {
 
 =======
 >>>>>>> my-extra-files
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className={`bg-white rounded-lg p-6 shadow-sm border mb-8 ${
 =======
@@ -215,6 +233,9 @@ const EventDetails: React.FC = () => {
 >>>>>>> my-extra-files
             isEventCreator ? 'border-blue-200 bg-blue-50/30' : 'border-gray-200'
           }`}
+=======
+          className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8"
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
         >
           <div className="flex items-start justify-between">
             <div className="flex items-start space-x-4">
@@ -228,6 +249,7 @@ const EventDetails: React.FC = () => {
                     {event.status}
                   </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {isEventCreator && (
 =======
                      {isEventCreator && (
@@ -236,6 +258,8 @@ const EventDetails: React.FC = () => {
                       Your Event
                     </span>
                   )}
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                 </div>
                 <div className="flex items-center space-x-4 text-gray-600 mb-4">
                   <div className="flex items-center space-x-1">
@@ -290,7 +314,11 @@ const EventDetails: React.FC = () => {
             </div>
             
             <div className="flex items-center space-x-3">
+<<<<<<< HEAD
               {event.status === 'ongoing' && event.isOnline && event.onlineLink && !isEventCreator && (
+=======
+              {event.status === 'ongoing' && event.isOnline && event.onlineLink && (
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                 <button
                   onClick={handleJoinEvent}
                   className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium flex items-center space-x-2"
@@ -299,6 +327,7 @@ const EventDetails: React.FC = () => {
                   <span>Join Event</span>
                 </button>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
               {!isEventCreator && (
 =======
@@ -321,6 +350,15 @@ const EventDetails: React.FC = () => {
                   <span>Manage Event</span>
                 </button>
               )}
+=======
+              <button
+                onClick={handleRegister}
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center space-x-2"
+              >
+                <ExternalLink className="h-5 w-5" />
+                <span>Register Now</span>
+              </button>
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
             </div>
           </div>
         </motion.div>
@@ -396,10 +434,14 @@ const EventDetails: React.FC = () => {
                         This is a virtual event. Access details will be provided after registration.
                       </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {event.onlineLink && event.status === 'ongoing' && !isEventCreator && (
 =======
                        {event.onlineLink && event.status === 'ongoing' && !isEventCreator && (
 >>>>>>> my-extra-files
+=======
+                      {event.onlineLink && event.status === 'ongoing' && (
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                         <button
                           onClick={handleJoinEvent}
                           className="inline-flex items-center space-x-1 text-sm text-green-600 hover:text-green-700"
@@ -488,6 +530,7 @@ const EventDetails: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
               className={`rounded-lg p-6 border ${
+<<<<<<< HEAD
                 isEventCreator
                   ? 'bg-blue-50 border-blue-200'
                   : event.status === 'closed' 
@@ -515,10 +558,34 @@ const EventDetails: React.FC = () => {
                     : event.status === 'ongoing' 
                       ? 'This event is currently in progress. You can still register or join if it\'s online.'
                       : 'Register now to secure your spot at this event.'
+=======
+                event.status === 'closed' 
+                  ? 'bg-gray-50 border-gray-200'
+                  : event.status === 'ongoing' 
+                    ? 'bg-green-50 border-green-200' 
+                    : 'bg-blue-50 border-blue-200'
+              }`}
+            >
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {event.status === 'closed' 
+                  ? 'Event Ended' 
+                  : event.status === 'ongoing' 
+                    ? 'Event in Progress' 
+                    : 'Ready to Join?'
+                }
+              </h3>
+              <p className="text-sm text-gray-600 mb-4">
+                {event.status === 'closed' 
+                  ? 'This event has ended. Check out other upcoming events.'
+                  : event.status === 'ongoing' 
+                    ? 'This event is currently in progress. You can still register or join if it\'s online.'
+                    : 'Register now to secure your spot at this event.'
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                 }
               </p>
               
               <div className="space-y-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {isEventCreator ? (
                   <button
@@ -593,6 +660,47 @@ const EventDetails: React.FC = () => {
               
       
 >>>>>>> my-extra-files
+=======
+                <button
+                  onClick={handleRegister}
+                  className={`w-full px-4 py-3 rounded-lg font-medium transition-colors ${
+                    event.status === 'closed'
+                      ? 'bg-gray-400 text-white cursor-not-allowed'
+                      : 'bg-blue-600 text-white hover:bg-blue-700'
+                  }`}
+                  disabled={event.status === 'closed'}
+                >
+                  <div className="flex items-center justify-center space-x-2">
+                    <ExternalLink className="h-5 w-5" />
+                    <span>
+                      {event.status === 'closed' ? 'Registration Closed' : 'Register Now'}
+                    </span>
+                  </div>
+                </button>
+                
+                {event.status === 'ongoing' && event.isOnline && event.onlineLink && (
+                  <button
+                    onClick={handleJoinEvent}
+                    className="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+                  >
+                    <div className="flex items-center justify-center space-x-2">
+                      <ExternalLink className="h-5 w-5" />
+                      <span>Join Event Now</span>
+                    </div>
+                  </button>
+                )}
+              </div>
+              
+              {event.status !== 'closed' && (
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  Registration is handled externally
+                </p>
+              )}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
     </DashboardLayout>
   );
 };

@@ -5,6 +5,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import DashboardLayout from '../../components/layout/DashboardLayout';
+<<<<<<< HEAD
 import { 
   Users, 
   Search, 
@@ -22,6 +23,19 @@ import {
   Calendar,
   Award,
   Building
+=======
+import {
+  Users,
+  Search,
+  Eye,
+  CheckCircle,
+  XCircle,
+  Clock,
+  AlertCircle,
+  GraduationCap,
+  MapPin,
+  Award
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 } from 'lucide-react';
 
 interface CompanyApplication {
@@ -306,17 +320,24 @@ const ManageCompanyApplications: React.FC = () => {
 
                   <div className="mt-4 flex items-center justify-between">
                     <div className="flex items-center space-x-2">
+<<<<<<< HEAD
                       <button 
+=======
+                      <button
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                         onClick={() => setSelectedApplication(application)}
                         className="flex items-center space-x-1 px-3 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                       >
                         <Eye className="h-4 w-4" />
                         <span>View Details</span>
                       </button>
+<<<<<<< HEAD
                       <button className="flex items-center space-x-1 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">
                         <MessageSquare className="h-4 w-4" />
                         <span>Message</span>
                       </button>
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                     </div>
 
                     {application.status === 'pending' && (

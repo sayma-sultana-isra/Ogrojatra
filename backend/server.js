@@ -5,7 +5,10 @@ import cors from 'cors';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import path from 'path';
+<<<<<<< HEAD
 import fs from 'fs';
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 
 // Import routes
 import authRoutes from './routes/authRoutes.js';
@@ -20,11 +23,15 @@ import userRoutes from './routes/userRoutes.js';
 import roadmapRoutes from './routes/roadmapRoutes.js';
 import companyRoutes from './routes/companyRoutes.js';
 import companyApplicationRoutes from './routes/companyApplicationRoutes.js';
+<<<<<<< HEAD
 import mentorshipRoutes from './routes/mentorshipRoutes.js';
 <<<<<<< HEAD
 =======
 
 >>>>>>> my-extra-files
+=======
+import recommendationRoutes from './routes/recommendationRoutes.js';
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 
 dotenv.config();
 
@@ -69,6 +76,7 @@ io.on('connection', (socket) => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // ✅ Ensure mentorship upload folder exists
 const mentorshipDir = path.join(process.cwd(), 'uploads/mentorship');
@@ -79,6 +87,8 @@ if (!fs.existsSync(mentorshipDir)) {
 
 >>>>>>> my-extra-files
 
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 // Make io and connectedUsers available in routes
 app.use((req, res, next) => {
   req.io = io;
@@ -110,9 +120,14 @@ app.use('/api/users', userRoutes);
 app.use('/api/roadmaps', roadmapRoutes);
 app.use('/api/companies', companyRoutes);
 app.use('/api/company-applications', companyApplicationRoutes);
+<<<<<<< HEAD
 app.use('/api/mentorship', mentorshipRoutes);
 
 app.use('/api/mentorship', mentorshipRoutes);
+=======
+app.use('/api/recommendations', recommendationRoutes);
+
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 
 // Health check route
 app.get('/', (req, res) => {

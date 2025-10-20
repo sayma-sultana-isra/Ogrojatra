@@ -394,4 +394,8 @@ const CreateEvent: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default CreateEvent;
+=======
+export default CreateEvent; 
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977

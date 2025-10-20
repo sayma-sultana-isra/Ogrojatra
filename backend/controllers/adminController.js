@@ -3,7 +3,10 @@ import Job from '../models/Job.js';
 import Application from '../models/Application.js';
 import Event from '../models/Event.js';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 // @desc    Get admin dashboard stats
 // @route   GET /api/admin/stats
 // @access  Private (Admin)
@@ -283,7 +286,10 @@ export const getAllJobs = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 //changes event fix 18 aug
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 export const getAllEvents = async (req, res) => {
   try {
     const { 
@@ -291,17 +297,22 @@ export const getAllEvents = async (req, res) => {
       limit = 10, 
       status, 
 <<<<<<< HEAD
+<<<<<<< HEAD
       type ,
 =======
             type ,
 >>>>>>> my-extra-files
       search,
       sort = '-createdAt'
+=======
+      type 
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
     } = req.query;
 
     const filter = {};
     if (status) filter.status = status;
     if (type) filter.type = type;
+<<<<<<< HEAD
     // Text search
     if (search) {
      filter.$or = [
@@ -321,6 +332,15 @@ export const getAllEvents = async (req, res) => {
          .limit(limit * 1)
          .skip((page - 1) * limit)
          .populate('postedBy', 'firstName lastName'),
+=======
+
+    const [events, total] = await Promise.all([
+      Event.find(filter)
+        .sort('-createdAt')
+        .limit(limit * 1)
+        .skip((page - 1) * limit)
+        .populate('postedBy', 'firstName lastName'),
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
       Event.countDocuments(filter)
     ]);
 

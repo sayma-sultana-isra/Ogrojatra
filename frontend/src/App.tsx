@@ -14,7 +14,10 @@ import AdminDashboard from './pages/dashboard/AdminDashboard';
 import JobSearch from './pages/job/JobSearch';
 import JobDetails from './pages/job/JobDetails';
 import Events from './pages/events/Events';
+<<<<<<< HEAD
 import ManageAdminEvents from  './pages/admin/ManageAdminEvents';
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 import EventDetails from './pages/events/EventDetails';
 import CareerRoadmap from './pages/roadmap/CareerRoadmap';
 import RoadmapDetails from './pages/roadmap/RoadmapDetails';
@@ -26,13 +29,20 @@ import CompanyApplications from './pages/applications/CompanyApplications';
 import Feed from './pages/social/Feed';
 import Network from './pages/social/Network';
 import UserSearch from './pages/social/UserSearch';
+<<<<<<< HEAD
+=======
+import NotificationsPage from './pages/notifications/NotificationsPage'; // This line is added
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 
 // Admin Pages
 import ManageUsers from './pages/admin/ManageUsers';
 import ManageJobs from './pages/admin/ManageJobs';
 import ManageRoadmaps from './pages/admin/ManageRoadmaps';
+<<<<<<< HEAD
 import ManageAdminEvents from  './pages/admin/ManageAdminEvents';
 
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 
 // Employer Pages
 import CreateJob from './pages/employer/CreateJob';
@@ -48,6 +58,7 @@ import ManageCompanyApplications from './pages/employer/ManageCompanyApplication
 import CompanySearch from './pages/company/CompanySearch';
 import CompanyDetails from './pages/company/CompanyDetails';
 
+<<<<<<< HEAD
 // Mentorship Pages
 import AlumniMentorshipDashboard from './pages/mentorship/AlumniMentorshipDashboard';
 import StudentMentorshipDashboard from './pages/mentorship/StudentMentorshipDashboard';
@@ -55,6 +66,10 @@ import CreateProgram from './pages/mentorship/CreateProgram';
 import ProgramContent from './pages/mentorship/ProgramContent';
 import AdminMentorshipManagement from './pages/mentorship/AdminMentorshipManagement';
 
+=======
+// Recommendation Pages
+import JobRecommendations from './pages/recommendations/JobRecommendations';
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
 
 function App() {
   return (
@@ -197,6 +212,19 @@ function App() {
                 }
               />
 
+<<<<<<< HEAD
+=======
+              {/* THIS IS THE NEW ROUTE FOR NOTIFICATIONS */}
+              <Route
+                path="/notifications"
+                element={
+                  <PrivateRoute>
+                    <NotificationsPage />
+                  </PrivateRoute>
+                }
+              />
+
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
               {/* Admin Routes */}
               <Route
                 path="/admin/users"
@@ -215,6 +243,7 @@ function App() {
                 }
               />
               <Route
+<<<<<<< HEAD
                 path="/admin/events"
                 element={
                   <PrivateRoute roles={['admin']}>
@@ -224,6 +253,8 @@ function App() {
               />
 
               <Route
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                 path="/admin/roadmaps"
                 element={
                   <PrivateRoute roles={['admin']}>
@@ -273,6 +304,7 @@ function App() {
                   </PrivateRoute>
                 }
               />
+<<<<<<< HEAD
                    <Route
                 path="/admin/events"
                 element={
@@ -281,6 +313,8 @@ function App() {
                   </PrivateRoute>
                 }
               />
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
               <Route
                 path="/companies/create"
                 element={
@@ -323,6 +357,7 @@ function App() {
                   </PrivateRoute>
                 }
               />
+<<<<<<< HEAD
                {/* Mentorship Routes */}
               <Route
                 path="/mentorship/alumni"
@@ -373,14 +408,26 @@ function App() {
                   <PrivateRoute roles={['student', 'alumni']}>
 >>>>>>> my-extra-files
                     <ProgramContent />
+=======
+
+              {/* Recommendation Routes */}
+              <Route
+                path="/recommendations"
+                element={
+                  <PrivateRoute roles={['student', 'alumni']}>
+                    <JobRecommendations />
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
                   </PrivateRoute>
                 }
               />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               
 =======
 >>>>>>> my-extra-files
+=======
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
               {/* Root redirect */}
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               
@@ -427,5 +474,10 @@ function DashboardRouter() {
   }
 }
 
+<<<<<<< HEAD
 
 export default App;
+=======
+export default App;
+
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977

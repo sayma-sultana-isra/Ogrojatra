@@ -16,7 +16,15 @@ export const deleteUser = (url) => instance.delete(url);
 
 
   instance.interceptors.request.use(function (config) {
+<<<<<<< HEAD
     // Do something before request is sent
+=======
+    // Add token to request headers
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+>>>>>>> e292f5c00bf45c011f5b610d8f82558887377977
     return config;
   }, function (error) {
     // Do something with request error
